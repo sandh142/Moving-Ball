@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Move Me</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #container {
+                position:absolute;
+                top:50px;
+                left:50px;
+                width:500px;
+                height:500px;
+                border: 10px solid black;
+                border-radius: 70px;
+            }
+            #ball {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+				right: 0px;
+                width: 100px;
+                height: 100px;
+                background-color: green;
+                border-radius:100px;
+                border:10px solid black;
+            }
+	        .left {
+                position: absolute;
+                top: 350px;
+                left: 600px;
+                width: 100px;
+                height: 100px;
+            }
+			
+			.right {
+                position: absolute;
+                top: 350px;
+                left: 800px;
+				right: 0px;
+                width: 100px;
+                height: 100px;
+            }
+			
+			.up {
+                position: absolute;
+                top: 480px;
+                left: 600px;
+				up: 0px;
+				down: 0px;
+                width: 100px;
+                height: 100px;
+            }
+			
+			.down {
+                position: absolute;
+                top: 480px;
+                left: 800px;
+				up: 0px;
+				down: 0px;
+                width: 100px;
+                height: 100px;
+            }
+			
+        </style>
+    </head>
+    <body style="background-image:url(https://images4.alphacoders.com/605/60578.jpg);  background-size: 90% auto;">
+	<h1 align="right" style="font-size: 70px; color: brown;">WELCOME</h1>
+	<h2 align="right" style="font-size: 60px; color: brown;">TO MY</h2>
+	<h3 align="right" style="font-size: 60px; color: brown ;">WORLD !!</h3>
+        <div id="container">
+            <div id="ball"></div>
+        </div>
+		<form>
+		<input type ="button" class="right" value="right" onclick="goRight()"/>
+		<input type ="button" class="up" value = "up" onclick="goUp()"/>
+		<input type ="button" class="down" value = "down" onclick="goDown()"/>
+		<input type ="button" class="left" value = "left" onclick="goLeft()"/>
+		</form>
+   
+   <script>
+var width=100;
+var height=100;
+var left=0;
+var up=0;
+var down=0;
+var right=0;
+
+function goLeft()
+{
+document.getElementById("ball").style.left=left+"px";
+left-=10;
+document.getElementById("ball").style.width=width+"px";
+width-=10;
+}
+
+function goRight()
+{
+document.getElementById("ball").style.left=left+"px";
+left+=10;
+document.getElementById("ball").style.width=width+"px";
+width+=10;
+}
+
+function goDown()
+{
+document.getElementById("ball").style.top=up+"px";
+up+=10;
+document.getElementById("ball").style.height=height+"px";
+height+=10;
+}
+
+function goUp()
+{
+document.getElementById("ball").style.top=up+"px";
+up-=10;
+document.getElementById("ball").style.height=height+"px";
+height-=10;
+}
+
+
+</script>
+    </body>
+</html>
